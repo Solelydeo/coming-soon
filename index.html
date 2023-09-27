@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+    <div id="background-container">
+	    <head>
+		    <title> Meditation</title>
+		    <meta charset="utf-8" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		    <link rel="stylesheet" href="./style.css" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    </head>
+        <body>
+            <div id="header">
+                 <img src="./hsks.png" alt="brand logo" id="logo">
+                <div id="header-links">
+                    <a href="#image">Countdown</a>
+                    <a href="#notify">Notify</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div id="container">
+                <h1>COMING SOON: Your path to inner peace</h1>
+                <h2>Meditation made simple</h2>
+            </div>
+            <div id="paragraph">
+                <p>
+                    Welcome to our meditation app, where tranquility meets technology. <br> We are on a mission to help you find inner peace and balance in today’s hectic world.
+                </p>
+                <p>
+                    <b>OUR KEY FEATURES INCLUDE:</b>
+                    <ul>
+                        <li>Guided meditation sessions</li>
+                        <li>Customizable meditation timers</li>
+                        <li>Calming music</li>
+                        <li>Progress tracker</li>
+                    </ul>
+                </p>
+            </div>
+            <img src="./5184247.jpg" id="right-image" alt="vector of woman meditating">
+            <div class="image-container">
+                <img src="./close-up-kid-meditating-mat.jpg" id="image" alt="close-up-kid-meditating-mat">
+                <div class="image-text">
+                    Days until your journey to mindfulness begins
+                </div>
+                <div class="countdown">
+                    <div class="countdown-item">
+                      <span class="countdown-number" id="days">365</span>
+                      <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-colon">:</div>
+                    <div class="countdown-item">
+                      <span class="countdown-number" id="hours">24</span>
+                      <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-colon">:</div>
+                    <div class="countdown-item">
+                      <span class="countdown-number" id="minutes">60</span>
+                      <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-colon">:</div>
+                    <div class="countdown-item">
+                      <span class="countdown-number" id="seconds">60</span>
+                      <span class="countdown-label">Seconds</span>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    function updateCountdown() {
+                      const currentDate = new Date();
+                      const targetDate = new Date('2024-09-27T00:00:00');
+                      const timeDifference = targetDate - currentDate;
+                  
+                      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                      const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+                      const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
+                      const seconds = Math.floor((timeDifference / 1000) % 60);
+                  
+                      document.getElementById('days').textContent = days;
+                      document.getElementById('hours').textContent = hours;
+                      document.getElementById('minutes').textContent = minutes;
+                      document.getElementById('seconds').textContent = seconds;
+                    }
+                    updateCountdown();
+                    setInterval(updateCountdown, 1000);
+                  </script>
+                  
+            </div>
+            <p id="notify">Get notified when we launch</p>
+            <form>
+                <input type="email" id="email" name="email" placeholder="Enter email address">
+                <input type="submit" value="Notify Me">
+            </form>
+            <footer>
+                &copy;2023 Adeola Adesanwo. All rights reserved.
+            </footer>
+        </body>
+    </div>
+</html>
